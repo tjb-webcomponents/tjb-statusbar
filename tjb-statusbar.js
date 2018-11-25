@@ -12,6 +12,10 @@ class StatusBar extends WebComponent {
           --statusbar-width: 100%;
           --statusbar-height: 5px;
           --statusbar-position: absolute;
+          --statusbar-left: 0;
+          --statusbar-bottom: 0;
+          --statusbar-top: auto;
+          --statusbar-right: auto;
           --status-loading: linear-gradient(
             to right,
             #4cd964,
@@ -32,8 +36,10 @@ class StatusBar extends WebComponent {
           position: var(--statusbar-position);
           max-height: 0;
           overflow: hidden;
-          left: 0;
-          bottom: 0;
+          left: var(--statusbar-left);
+          bottom: var(--statusbar-bottom);
+          top: var(--statusbar-top);
+          right: var(--statusbar-right);
           transition: max-height 250ms linear;
         }
 

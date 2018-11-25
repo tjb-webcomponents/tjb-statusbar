@@ -73,21 +73,32 @@ Default public values:
 
 ```css
 :host {
-  --color-error: #fa354c;
-  --input-padding: 10px;
-  --input-margin: 0 0 30px 0;
-  --input-width: 100%;
-  --input-font-size: 1rem;
-  --info-color: grey;
-  --info-font-size: 0.8rem;
+  --statusbar-width: 100%;
+  --statusbar-height: 5px;
+  --statusbar-position: absolute;
+  --statusbar-left: 0;
+  --statusbar-bottom: 0;
+  --statusbar-top: auto;
+  --statusbar-right: auto;
+  --status-loading: linear-gradient(
+    to right,
+    #4cd964,
+    #007aff,
+    #ff2d55,
+    #5856d6,
+    #4cd964
+  );
+  --status-alert: #fa354c;
+  --status-success: #4cd964;
+  --status-info: #007aff;
 }
 ```
 
-These can be overwritten easily by targetting the element. Example:
+These can be overwritten easily by targeting the element. Example:
 
 ```css
 tjb-statusbar {
-  --input-width: 300px;
+  --status-alert: red;
 }
 ```
 
