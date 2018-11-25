@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>tjb-statusbar</title>
+</head>
+<body>
+  
+  <h1>tjb-statusbar</h1>
+
+  <h2>Example:</h2>
+
+  <div class="example">
+
+    <tjb-statusbar></tjb-statusbar>
+
+    <script
+      src="tjb-statusbar.js"
+      type="module"
+    ></script>
+
+  </div>
+
+  <button onclick="handleTrigger()">Trigger</button>
+
+  <script>
+    function handleTrigger() {
+      console.log("hello");
+      const element = document.querySelector('tjb-statusbar');
+      element.status = 'loading';
+      setTimeout(e => element.status = 'alert', 3000);
+      setTimeout(e => element.status = 'success', 6000);
+      setTimeout(e => element.status = 'info', 9000);
+      setTimeout(e => element.status = '', 12000);
+    }
+  </script>
+
+</body>
+</html>
