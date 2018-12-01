@@ -1,6 +1,6 @@
 {
   "name": "tjb-statusbar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "awesome status bar webcomponent",
   "main": "docs/tjb-statusbar.min.js",
   "directories": {
